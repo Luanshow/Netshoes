@@ -1,0 +1,30 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Produtos
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Produtos</ion-title>
+    </ion-toolbar>
+  </ion-header>
+    <app-action-sheet></app-action-sheet>
+    
+    <ion-card *ngFor="let p of produtos">
+      <img alt="Silhouette of mountains" src={{p.imagem}} />
+      <ion-card-header>
+        <ion-card-title>{{produtos[0].produto}}</ion-card-title>
+        <ion-card-subtitle>{{produtos[0].preco}}</ion-card-subtitle>
+      </ion-card-header>
+    
+      <ion-card-content>
+        {{produtos[0].miniDescricao}}
+      </ion-card-content>
+    </ion-card>
+
+    <ion-button expand="block">Block</ion-button> 
+</ion-content>
